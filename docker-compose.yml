@@ -1,0 +1,35 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: docker/app/Dockerfile
+        container_name: laravel_app
+        restart: unless-stopped
+        working_dir: /var/www/html
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "8080:80"
+        depends_on:
+            - db
+        env_file:
+            - .env
+
+    db:
+        image: mysql:8
+        container_name: laravel_db
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+        ports:
+            - "${DB_PORT}:3306"
+        volumes:
+            - db_data:/var/lib/mysql
+        env_file:
+            - .env
+
+volumes:
+    db_data:
