@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de crŽation :  24/03/2025 18:03:56                      */
+/* Date de crï¿½ation :  24/03/2025 18:03:56                      */
 /*==============================================================*/
 
 
@@ -39,6 +39,7 @@ create table CONTENT
    CONTENT_DESCRIPTION  text,
    CONTENT_IMAGE        varchar(255),
    CONTENT_PUBLISHER    int not null,
+   CONTENT_TECHNOLOGY   varchar(255) not null,
    primary key (CONTENT_ID)
 );
 
@@ -85,6 +86,7 @@ create table USER
    USER_USERNAME        varchar(50) not null,
    USER_PASSWORD        varchar(255) not null,
    USER_AVATAR          varchar(255) not null,
+   USER_ROLE            varchar(255) not null,
    USER_PREFERENCES     int not null,
    primary key (USER_ID)
 );
