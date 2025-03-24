@@ -1,66 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <img src="public/images/logo.png" height="128">
 </p>
 
-## About Laravel
+## À propos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Admin Services** est un site Internet permettant aux utilisateurs de publier des applications web et de les utiliser. **Admin Services** propose un panneau d'accueil permettant aux utilisateurs d'utiliser des widgets ou d'épingler des applications web.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Cloner le dépôt
 
-## Learning Laravel
+```bash
+git clone https://github.com/enioaiello/admin-services.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Installer les dépendances
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+composer install
+npm install
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 3. Configurer l'environnement
 
-## Laravel Sponsors
+> [!IMPORTANT]  
+> Dans le fichier ``.env``, mettez d'abord le compte ``root`` puis générez la clé.
+> Une fois la clé générée, utilisez une autre session pour configurer et utiliser la base de données.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-### Premium Partners
+### 4. Configurer la base de données
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+```bash
+docker exec -it laravel_app php artisan migrate
+```
 
-## Contributing
+### 5. Lancer le serveur
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+> [!NOTE]  
+> Retirez l'argument ``--build`` si vous avez déjà construit l'image.
 
-## Code of Conduct
+```bash
+docker-compose up -d --build
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 6. Accéder au site
 
-## Security Vulnerabilities
+Ouvrez votre navigateur et accédez à l'adresse ``http://localhost:8080``.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Fonctionnalités
 
-## License
+La plupart des fonctionnalités sont en cours de développement. Elles sont directement reprises de la version ["legacy" du projet](https://github.com/enioaiello/admin-services-legacy).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Les fonctionnalités suivantes sont prévues pour le projet :
+
+- [ ] Authentification
+- [ ] Page d'accueil
+- [ ] Applications par défaut
+- [ ] Widgets par défaut
+- [ ] Écran de verrouillage
+- [ ] Support
+
+### Authentification
+
+- [ ] Inscription
+- [ ] Connexion
+- [ ] Déconnexion
+- [ ] Comptes locaux
+
+### Page d'accueil
+
+- [ ] Applications récentes
+- [ ] Applications épinglées
+- [ ] Widgets
+- [ ] Liens rapides (annonces, support, etc.)
+- [ ] Personnalisation des catégories (accueil, applications, widgets, services, annonces, support, astuces)
+- [ ] Fonds d'écran
+
+### Applications par défaut
+
+- [ ] Accueil
+- [ ] Paramètres
+- [ ] Support
+- [ ] Services
+- [ ] Astuces
+- [ ] Annonces
+- [ ] Centre de sécurité
+
+### Applications par défaut prévues :
+
+- Éditeur de texte
+- Messagerie
+- Boutique d'applications (permettant d'ajouter des applications)
+
+### Widgets par défaut
+
+- [ ] Calendrier
+- [ ] Météo
+
+### Écran de verrouillage
+
+- [ ] Connexion par mot de passe
+- [ ] Réinitialisation du mot de passe
+- [ ] Fond d'écran
+- [ ] Date et heure
+
+### Support
+
+- [ ] Centre d'aide
+- [ ] Articles pour chaque fonctionnalité
+- [ ] Communication avec les développeurs
+
+## Technologies
+
+- [Laravel](https://laravel.com)
+- [PHP](https://www.php.net)
+- [MySQL](https://www.mysql.com)
+
+## Licence
+
+Ce projet utilise la licence MIT. Pour la consulter, veuillez lire le fichier ``LICENSE``.
