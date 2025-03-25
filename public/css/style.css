@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: 200ms ease-in-out;
+    scroll-behavior: smooth;
+
+    border: 1px solid red;
+}
+
+:root {
+    --default-color: #40798C;
+    --selected-default-color: #40798Caa;
+    --white-color: #F8F9FA;
+    --background-white-color: #E9ECEF;
+    --black-color: #343A40;
+    --background-black-color: #343A40;
+    --gray-color: #808080ff;
+    --red-color: #DC3545;
+    --select-red-color: #DC3545aa;
+    --lightgray-color: #D3D3D3ff;
+    --background-gray-color: #CCCCCC;
+    --box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    --border-radius: 5px;
+}
+
+::selection {
+    background-color: var(--default-color);
+    color: var(--white-color);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .header,
+    .footer {
+        padding: 1% 0;
+        background-color: var(--default-color);
+        color: var(--white-color);
+    }
+
+    .main {
+        flex: 1;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar .brand .icon {
+    height: 64px;
+}
+
+.header .navbar-list {
+    list-style-type: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.link {
+    color: var(--default-color);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--selected-default-color);
+}
+
+.code {
+    display: block;
+    width: 100%;
+    padding: 1%;
+    background-color: var(--background-black-color);
+    color: var(--white-color);
+    margin: 1vh 0;
+    border-radius: var(--border-radius);
+}
