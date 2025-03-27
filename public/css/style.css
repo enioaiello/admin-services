@@ -8,7 +8,7 @@
     transition: 200ms ease-in-out;
     scroll-behavior: smooth;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 :root {
@@ -36,24 +36,25 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
-    .header,
-    .footer {
-        padding: 1% 0;
-        background-color: var(--default-color);
-        color: var(--white-color);
-    }
-
-    .main {
-        flex: 1;
-    }
+    margin: 0;
+    background: no-repeat fixed center;
+    background-size: cover;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    position: sticky;
+    width: 100%;
+    padding: 1% 0;
+    background-color: var(--default-color);
+    color: var(--white-color);
+    z-index: 99999999999;
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .header .navbar .brand .icon {
@@ -61,7 +62,28 @@
 }
 
 .header .navbar-list {
+    width: 75%;
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .logout-container {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logout-container .logout-button .profile-picture {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+.main {
+    flex: 1;
+    margin-top: 1vh;
+    height: 209vh;
 }
 
 .container {

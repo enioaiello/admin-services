@@ -27,7 +27,7 @@
                     </li> -->
                     <li class="navbar-element logout-container">
                         <a href="#" class="logout-button">
-                            <img src="#" alt="Photo de profil" class="profile-picture">
+                            <img src="https://enioaiello.github.io/assets/images/profile.png" alt="Photo de profil" class="profile-picture">
                         </a>
                     </li>
                 </ul>
@@ -45,10 +45,5 @@
                 </code>
             </div>
         </main>
-        <footer class="footer">
-            <div class="container">
-                <p>Lorem ipsum</p>
-            </div>
-        </footer>
     </body>
 </html>

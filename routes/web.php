@@ -10,4 +10,4 @@ Route::get('/loading', function () {
 });
 Route::get('/test', function () {
     return view('test');
-})
+});
