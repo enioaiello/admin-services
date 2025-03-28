@@ -13,6 +13,9 @@ RUN a2enmod rewrite
 # Installer Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Installe les extensions nécessaires
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
 # Définir le dossier de travail
 WORKDIR /var/www/html
 COPY docker/app/apache-config.conf /etc/apache2/sites-available/000-default.conf

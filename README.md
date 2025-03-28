@@ -120,6 +120,10 @@ Les fonctionnalités suivantes sont prévues pour le projet :
 - [PHP](https://www.php.net)
 - [MySQL](https://www.mysql.com)
 
+## Dépendances
+
+Cette liste est toujours en rédaction.
+
 ## Licence
 
 Ce projet utilise la licence MIT. Pour la consulter, veuillez lire le fichier ``LICENSE``.
