@@ -7,6 +7,9 @@
     <meta name="description" content="Admin Services est un site Internet permettant aux utilisateurs de publier des applications web et de les utiliser">
     <title>Admin Services</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @if (Request::is('/'))
+        <link rel="stylesheet" href="{{ asset('css/components/welcome.css') }}">
+    @endif
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <!-- Métadonnées Open Graph -->
@@ -23,34 +26,34 @@
             <img src="{{ asset('images/logo.png') }}" alt="Logo Admin Services" class="icon">
         </a>
         <ul class="navbar-list">
-{{--            @auth--}}
-{{--                <li class="navbar-element logout-container">--}}
-{{--                    <a href="{{ route('profile.show') }}" class="logout-button">--}}
-{{--                        <img src="{{ Auth::user()->profile_photo_url ?? asset('images/profile/default.png') }}"--}}
-{{--                             alt="Photo de profil"--}}
-{{--                             class="profile-picture">--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--            @endauth--}}
-{{--            @guest--}}
-{{--                <li class="navbar-element">--}}
-{{--                    <a href="{{ route('login') }}" class="login-button link"><i class="ri-user-fill"></i></a>--}}
-{{--                </li>--}}
-{{--            @endguest--}}
             @auth
-                <li class="navbar-element">
-                    <a href="{{ route('login') }}" class="login-button link"><i class="ri-user-fill"></i></a>
-                </li>
-            @endauth
-            @guest
                 <li class="navbar-element logout-container">
-                    <a href="{{ route('dashboard') }}" class="logout-button">
+                    <a href="{{ route('profile.show') }}" class="logout-button">
                         <img src="{{ Auth::user()->profile_photo_url ?? asset('images/profile/default.png') }}"
                              alt="Photo de profil"
                              class="profile-picture">
                     </a>
                 </li>
+            @endauth
+            @guest
+                <li class="navbar-element">
+                    <a href="{{ route('login') }}" class="login-button link"><i class="ri-user-fill"></i></a>
+                </li>
             @endguest
+{{--            @auth--}}
+{{--                <li class="navbar-element">--}}
+{{--                    <a href="{{ route('login') }}" class="login-button link"><i class="ri-user-fill"></i></a>--}}
+{{--                </li>--}}
+{{--            @endauth--}}
+{{--            @guest--}}
+{{--                <li class="navbar-element logout-container">--}}
+{{--                    <a href="{{ route('dashboard') }}" class="logout-button">--}}
+{{--                        <img src="{{ Auth::user()->profile_photo_url ?? asset('images/profile/default.png') }}"--}}
+{{--                             alt="Photo de profil"--}}
+{{--                             class="profile-picture">--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            @endguest--}}
         </ul>
     </nav>
 </header>
