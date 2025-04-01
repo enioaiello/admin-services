@@ -44,7 +44,6 @@
 .header {
     position: sticky;
     width: 100%;
-    padding: 1% 0;
     background-color: var(--default-color);
     color: var(--white-color);
     z-index: 99999999999;
@@ -54,11 +53,23 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        padding: 2% 0;
     }
 }
 
+.header .navbar .brand {
+    height: 45px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.header .navbar .brand:hover {
+    transform: scale(1.2);
+}
+
 .header .navbar .brand .icon {
-    height: 64px;
+    width: 100%;
+    height: 100%;
 }
 
 .header .navbar-list {
@@ -74,9 +85,11 @@
     }
 
     .logout-container .logout-button .profile-picture {
-        width: 100%;
-        height: 100%;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
+        max-width: 40px;
+        max-height: 40px;
     }
 }
 

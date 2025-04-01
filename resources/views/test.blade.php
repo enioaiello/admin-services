@@ -38,7 +38,6 @@
                 <h1>Page de test</h1>
                 <h2>Veuillez lire</h2>
                 <p>La recréation d'ArticlesUI et du service entier est en cours. Cette page sert donc à tester les différents composants d'ArticlesUI.</p>
-                <hr>
                 <p>Lorem ipsum <a href="http://www.google.com" class="link">dolor sit ammet</a>.</p>
                 <code class="code">
                     Test
