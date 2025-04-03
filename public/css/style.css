@@ -351,6 +351,12 @@
         text-align: center;
         margin: 1vh 0;
     }
+
+    .link {
+        display: block;
+        text-align: left;
+        margin: 1vh 0;
+    }
 }
 
 .form:hover {

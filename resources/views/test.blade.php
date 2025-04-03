@@ -64,6 +64,7 @@
                         <label class="label">
                             <input type="password" name="password" id="password" placeholder="Mot de passe" class="input">
                         </label>
+                        <a href="#" class="link">Mot de passe oublié</a>
                         <input type="submit" value="Se connecter" class="button">
                     </div>
                 </form>
