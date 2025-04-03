@@ -22,13 +22,13 @@
 <body class="body">
 <header class="header">
     <nav class="container navbar">
-        <a href="/" class="brand">
+        <a href="/" class="brand" title="Retourner à l'accueil">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Admin Services" class="icon">
         </a>
         <ul class="navbar-list">
             @auth
                 <li class="navbar-element logout-container">
-                    <a href="{{ route('profile.show') }}" class="logout-button">
+                    <a href="{{ route('profile.show') }}" class="logout-button" title="Options de connexion">
                         <img src="{{ Auth::user()->profile_photo_url ?? asset('images/profile/default.png') }}"
                              alt="Photo de profil"
                              class="profile-picture">
@@ -37,7 +37,7 @@
             @endauth
             @guest
                 <li class="navbar-element">
-                    <a href="{{ route('login') }}" class="login-button link"><i class="ri-user-fill"></i></a>
+                    <a href="{{ route('login') }}" class="login-button link" title="Se connecter"><i class="ri-user-fill"></i></a>
                 </li>
             @endguest
 {{--            @auth--}}

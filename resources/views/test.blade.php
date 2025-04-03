@@ -1,6 +1,7 @@
 @include('layouts.header')
         <main class="main">
             <div class="container">
+                <img src="{{ asset('images/articlesui/banner.png') }}" alt="ArticlesUI 4" class="banner">
                 <h1 class="title">Page de test</h1>
                 <h2 class="subtitle">Veuillez lire</h2>
                 <p class="paragraph">La recréation d'ArticlesUI et du service entier est en cours. Cette page sert donc à tester les différents composants d'ArticlesUI.</p>
@@ -40,7 +41,32 @@
                     </article>
                 </div>
                 <div class="spinner"></div>
-                <div style="height: 75vh;"></div>
+                <div class="alert">
+                    Je suis une alerte simple
+                </div>
+                <div class="alert danger">
+                    Je suis une alerte importante
+                </div>
+                <div class="alert details">
+                    <div class="head">
+                        <img src="{{ asset('images/logo.png') }}" alt="Icon" class="icon">
+                        <h3 class="subtitle">Notification</h3>
+                    </div>
+                    <p class="content">Vous consultez la page de test <strong>ArticlesUI</strong> en version 4. Certains éléments peuvent ne pas fonctionner correctement. Merci de faire une
+                        <a href="https://github.com/enioaiello/atomix/issues" target="_blank" class="link">issue</a> en cas de problème.</p>
+                </div>
+                <form class="form">
+                    <h2 class="title">Connexion</h2>
+                    <div class="inputs">
+                        <label class="label">
+                            <input type="email" name="email" id="email" placeholder="Adresse email" class="input">
+                        </label>
+                        <label class="label">
+                            <input type="password" name="password" id="password" placeholder="Mot de passe" class="input">
+                        </label>
+                        <input type="submit" value="Se connecter" class="button">
+                    </div>
+                </form>
             </div>
         </main>
 @include('layouts.footer')

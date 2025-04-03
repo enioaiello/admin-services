@@ -131,6 +131,11 @@
     color: var(--selected-default-color);
 }
 
+.banner {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
 .code {
     display: block;
     width: 100%;
@@ -143,7 +148,7 @@
     font-size: 1.2rem;
 }
 
-.code   ::selection {
+.code::selection {
     background-color: var(--white-color);
     color: var(--black-color);
 }
@@ -254,6 +259,125 @@
     border-top: 5px solid var(--default-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
+}
+
+.alert {
+    width: 100%;
+    background-color: var(--default-color);
+    color: var(--white-color);
+    margin: 1vh 0;
+    padding: 1%;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+        font-size: 2rem;
+    }
+
+    .content {
+        width: 100%;
+        text-align: left;
+    }
+
+    .link {
+        color: var(--white-color);
+        text-decoration: underline;
+    }
+
+    .link:hover {
+        color: var(--gray-color);
+    }
+}
+
+.alert.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .head {
+        width: 100%;
+        margin: 0 0 1vh 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .icon {
+            margin: 0 0.5vw 0 0;
+        }
+    }
+}
+
+.alert.danger {
+    background-color: var(--red-color);
+}
+
+.alert::selection,
+.alert.details *::selection{
+    background-color: var(--white-color);
+    color: var(--default-color);
+}
+
+.alert.danger::selection {
+    background-color: var(--white-color);
+    color: var(--red-color);
+}
+
+.alert:hover {
+    transform: scale(1.025);
+    box-shadow: var(--box-shadow);
+}
+
+.form {
+    width: 100%;
+    margin: 1vh 0;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightgray-color);
+    border-radius: var(--border-radius);
+
+    .title {
+        width: 100%;
+        text-align: center;
+        margin: 1vh 0;
+    }
+}
+
+.form:hover {
+    transform: scale(1.025);
+    box-shadow: var(--box-shadow);
+}
+
+.form .inputs {
+    width: 100%;
+
+    .label {
+        width: 100%;
+    }
+
+    .label .input {
+        width: 100%;
+        padding: 1%;
+        margin: 1vh 0;
+        border: 1px solid var(--black-color);
+        border-radius: var(--border-radius);
+        outline: none;
+        background-color: var(--background-white-color);
+    }
+
+    .label .input:focus {
+        border: 1px solid var(--default-color);
+    }
 }
 
 @keyframes spin {
