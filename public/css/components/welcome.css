@@ -1,4 +1,32 @@
-.banner {
-    width: 100%;
-    background: no-repeat center center fixed;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: 200ms ease-in-out;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --default-color: #40798C;
+    --selected-default-color: #40798Caa;
+    --white-color: #F8F9FA;
+    --background-white-color: #E9ECEF;
+    --black-color: #343A40;
+    --background-black-color: #343A40;
+    --gray-color: #808080ff;
+    --red-color: #DC3545;
+    --select-red-color: #DC3545aa;
+    --lightgray-color: #D3D3D3ff;
+    --background-gray-color: #CCCCCC;
+    --box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    --border-radius: 5px;
+    --border-radius-round: 50%;
+}
+
+::selection {
+    background-color: var(--default-color);
+    color: var(--white-color);
 }
