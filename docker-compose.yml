@@ -3,7 +3,7 @@ services:
         build:
             context: .
             dockerfile: docker/app/Dockerfile
-        container_name: laravel_app
+        container_name: admin-services
         restart: unless-stopped
         working_dir: /var/www/html
         volumes:
@@ -17,7 +17,7 @@ services:
 
     db:
         image: mysql:8
-        container_name: laravel_db
+        container_name: database
         restart: unless-stopped
         environment:
             MYSQL_ROOT_PASSWORD: root

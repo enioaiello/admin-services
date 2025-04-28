@@ -35,7 +35,7 @@ php artisan key:generate
 ### 4. Configurer la base de données
 
 ```bash
-docker exec -it laravel_app php artisan migrate
+docker exec -it admin-services php artisan migrate
 ```
 
 ### 5. Lancer le serveur
