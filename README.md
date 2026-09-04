@@ -1,23 +1,23 @@
-# {{PROJECT_NAME}}
+# Admin Services
 
-{{One-line tagline describing the project}}
+A web service that allows you to create, share, and use web apps.
 
 ## About
 
-{{Paragraph describing what the project does, why it exists, and who it's for.}}
+Admin Services is a web service that allows users to create, share, and use web apps (front-end) in a browser. The platform already offers applications, widgets, and customization options.
 
 ## Features
 
-### {{Feature 1 Title}}
-{{Short paragraph describing the feature and its benefit.}}
+### Use apps
+Add the apps you want to use from the Content Center, and then use them however you like.
 
-### {{Feature 2 Title}}
-{{Short paragraph describing the feature and its benefit.}}
+### Customize
+Pin apps, manage what's displayed, apply themes, customize your profile, and much more.
 
-### {{Feature 3 Title}}
-{{Short paragraph describing the feature and its benefit.}}
+### Communicate
+Share your contact info, send messages, post content… connect with others.
 
-## Installation
+<!-- ## Installation
 
 ### Using a pre-built release
 1. Download the latest release from the [Releases](../../releases) page.
@@ -36,7 +36,7 @@ cd {{REPO_NAME}}
 
 ```bash
 {{example command}}
-```
+``` -->
 
 ## Contributing
 
