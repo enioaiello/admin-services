@@ -1,0 +1,72 @@
+# Fichiers système d'exploitation
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Fichiers d'IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Fichiers Composer
+vendor/
+composer.phar
+# composer.lock
+
+# Fichiers Node
+node_modules/
+dist/
+build/
+public/build/
+.env.local
+.env.*.local
+
+# Fichiers Vide
+.vite/
+*.log
+*.cache/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers tests unitaires
+/coverage/
+.phpunit.result.cache
+
+# Fichiers logs
+*.log
+logs/
+*.pid
+*.seed
+
+# Fichiers d'environnement
+.env
+.env.*
+!.env.example
+
+# Fichiers temporaires
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Autres fichiers
+*.orig
+*.lock-wscript
+.pnp.*
+.pnpm-debug.log
+
+# Fichiers Docker
+docker-compose.override.yml
+.env.docker
+
+# Fichiers Laravel
+storage/
+bootstrap/cache/
+
+# Fichiers Symfony
+var/
